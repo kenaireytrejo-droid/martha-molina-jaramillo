@@ -9,6 +9,20 @@
   gtag('js', new Date());
 
   gtag('config', 'AW-18485807173');
+  function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18485807173/bxYjCOvm_48dEMWQ3O5E',
+      'value': 1.0,
+      'currency': 'COP',
+      'event_callback': callback
+  });
+  return false;
+}
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -230,11 +244,11 @@ footer{text-align:center;color:#725d55;padding:28px 20px;background:#fff8ea;font
 <div class="service"><h3>🔮 Consultas</h3><p>Atención personalizada para conocer mi trabajo y recibir orientación dentro de mi tradición.</p></div>
 </div>
 <div style="text-align:center;margin-top:35px">
-  <a class="btn" href="https://wa.me/524401468520?text=Hola%20Martha%2C%20quiero%20hacer%20una%20consulta%20sobre%20sus%20trabajos." target="_blank" rel="noopener">💬 CONSULTAR POR WHATSAPP</a>
+  <a class="btn" href="https://wa.me/524401468520?text=Hola%20Martha%2C%20quiero%20hacer%20una%20consulta%20sobre%20sus%20trabajos." onclick="return gtag_report_conversion(this.href)"target="_blank" rel="noopener">💬 CONSULTAR POR WHATSAPP</a>
   <p style="margin:10px 0 0;color:#725d55;font:13px Arial,sans-serif">Mensaje directo para solicitar información y consulta.</p>
 </div>
 </section>
-
+ 
 <section>
 <div class="warning">
 <h3>⚠️ Aviso importante: cuidado con las cuentas falsas</h3>
